@@ -15,7 +15,7 @@ int main()
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
 
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "Pong", sf::Style::Default, settings);
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Default, settings);
 
     sf::Clock dtClock;
     sf::Time dt;

@@ -6,5 +6,4 @@ class FPSCounter: public sf::Text{
         bool visible; 
 
         FPSCounter();
-        void update(int dtSec);
 };

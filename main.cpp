@@ -6,6 +6,10 @@
 
 #include <SFML/System/Time.hpp>
 
+#include <string>
+
+#include "headers/fpsCounter.hpp"
+
 int main()
 {
     sf::ContextSettings settings;
@@ -16,15 +20,20 @@ int main()
     sf::Clock dtClock;
     sf::Time dt;
 
-    // fps counter - turn this into a class
-    /*sf::Text fpsCounter;
-    fpsCounter.setFont(digital);
-    fpsCounter.setString("0");
-    fpsCounter.setCharacterSize(36);
-    fpsCounter.setFillColor(sf::Color::White);
-    fpsCounter.setPosition(5,-5);
-    short fps=0;
-    bool fpsVisible = 0;*/
+    //font
+    sf::Font freshman;
+    if (!freshman.loadFromFile("assets/fonts/Freshman.ttf"))
+    {
+        window.close();
+    }
+
+    // fps counter
+    fpsCounter fps;
+    fps.setFont(freshman);
+    fps.setString("0");
+    fps.setCharacterSize(36);
+    fps.setFillColor(sf::Color::White);
+    fps.setPosition(5,-5);
 
     while (window.isOpen())
     {
@@ -43,9 +52,9 @@ int main()
                 {
                     window.close();
                 }
-                /*else if(event.key.code==sf::Keyboard::F1){
-                    fpsVisible=!fpsVisible;
-                }*/
+                else if(event.key.code==sf::Keyboard::F1){
+                    fps.visible=!fps.visible;
+                }
             }
         }
 
@@ -57,14 +66,14 @@ int main()
             player.move(0.f,192*dt.asSeconds());
         }*/
 
-        /*fps=1/dt.asSeconds();
-        fpsCounter.setString(std::to_string(fps)+" FPS");*/
+        fps.fps=1/dt.asSeconds();
+        fps.setString(std::to_string(fps.fps)+" FPS");
 
         window.clear();
 
-        /*if(fpsVisible){
-            window.draw(fpsCounter);
-        }*/
+        if(fps.visible){
+            window.draw(fps);
+        }
 
         window.display();
     }

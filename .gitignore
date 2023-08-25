@@ -1,2 +1,2 @@
-/jabol
-/main.o
+build/*.o
+build/jabol

@@ -30,11 +30,7 @@ int main()
     // fps counter
     FPSCounter fps;
     fps.setFont(freshman);
-    fps.setString("0");
-    fps.setCharacterSize(36);
-    fps.setFillColor(sf::Color::White);
-    fps.setPosition(5,-5);
-
+    
     while (window.isOpen())
     {
         dt = dtClock.restart();

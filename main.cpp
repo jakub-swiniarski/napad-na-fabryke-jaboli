@@ -8,7 +8,7 @@
 
 #include <string>
 
-#include "headers/fpsCounter.hpp"
+#include "headers/FPSCounter.hpp"
 
 int main()
 {
@@ -28,7 +28,7 @@ int main()
     }
 
     // fps counter
-    fpsCounter fps;
+    FPSCounter fps;
     fps.setFont(freshman);
     fps.setString("0");
     fps.setCharacterSize(36);

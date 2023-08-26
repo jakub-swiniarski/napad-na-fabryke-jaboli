@@ -20,25 +20,42 @@ Player::Player()
 
 void Player::update(float dt)
 {
+    clock.restart();
     // movement
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
         Player::move(0.f, -speed * dt);
         Player::setTexture(imgU);
+
+        if(clock.getElapsedTime().asSeconds()>=0.3){
+            clock.restart();
+        }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
         Player::move(0.f, speed * dt);
         Player::setTexture(imgD);
+
+        if(clock.getElapsedTime().asSeconds()>=0.3){
+            clock.restart();
+        }         
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
         Player::move(speed * dt, 0.f);
         Player::setTexture(imgR);
+
+        if(clock.getElapsedTime().asSeconds()>=0.3){
+            clock.restart();
+        } 
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
         Player::move(-speed * dt, 0.f);
         Player::setTexture(imgL);
+
+        if(clock.getElapsedTime().asSeconds()>=0.3){
+            clock.restart();
+        } 
     }
 }

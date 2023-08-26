@@ -14,6 +14,9 @@ protected:
     //clock for animation
     sf::Clock clock;
 
+    //current frame
+    short frame;
+
     short hp;
     short speed;
 

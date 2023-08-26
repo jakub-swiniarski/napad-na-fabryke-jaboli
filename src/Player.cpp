@@ -1,9 +1,11 @@
 #include "../headers/Player.hpp"
 #include <SFML/Window/Keyboard.hpp>
+#include <string>
 
 Player::Player()
 {
     Player::setPosition(0, 0);
+    frame=0;
 
     //standing
     imgU.loadFromFile("assets/sprites/zywiec/idle/zywiecU.png");
@@ -12,50 +14,80 @@ Player::Player()
     imgL.loadFromFile("assets/sprites/zywiec/idle/zywiecL.png");
 
     //walking
+    for(int i=1; i<=2; i++){
+        imgUW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecU"+std::to_string(i)+".png"); 
+    }
+    for(int i=1; i<=2; i++){
+        imgDW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecD"+std::to_string(i)+".png"); 
+    }
+    for(int i=1; i<=2; i++){
+        imgRW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecR"+std::to_string(i)+".png"); 
+    }
+    for(int i=1; i<=2; i++){
+        imgLW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecL"+std::to_string(i)+".png"); 
+    }
 
     Player::setScale(4.f, 4.f);
     Player::setTexture(imgD);
     speed = 255;
+
+    clock.restart();  
 }
 
 void Player::update(float dt)
 {
-    clock.restart();
     // movement
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
         Player::move(0.f, -speed * dt);
-        Player::setTexture(imgU);
+        //Player::setTexture(imgU);
 
-        if(clock.getElapsedTime().asSeconds()>=0.3){
+        if(clock.getElapsedTime().asSeconds()>=0.1){
+            Player::setTexture(imgUW[frame%2]);
+            
+            frame++;             
             clock.restart();
         }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
         Player::move(0.f, speed * dt);
-        Player::setTexture(imgD);
+        //Player::setTexture(imgD);
+        
+        if(clock.getElapsedTime().asSeconds()>=0.1){
+            Player::setTexture(imgDW[frame%2]); 
 
-        if(clock.getElapsedTime().asSeconds()>=0.3){
+            frame++;
             clock.restart();
         }         
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
         Player::move(speed * dt, 0.f);
-        Player::setTexture(imgR);
+        //Player::setTexture(imgR);
 
-        if(clock.getElapsedTime().asSeconds()>=0.3){
+        if(clock.getElapsedTime().asSeconds()>=0.1){
+            Player::setTexture(imgRW[frame%2]); 
+
+            frame++;
             clock.restart();
         } 
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
         Player::move(-speed * dt, 0.f);
-        Player::setTexture(imgL);
+        //Player::setTexture(imgL);
 
-        if(clock.getElapsedTime().asSeconds()>=0.3){
+        if(clock.getElapsedTime().asSeconds()>=0.1){
+            Player::setTexture(imgLW[frame%2]);
+
+            frame++;
             clock.restart();
         } 
+    }
+
+    //reset current frame
+    if(frame>=10){
+        frame=0;
     }
 }

@@ -29,8 +29,8 @@ int main()
     }
 
     // fps counter
-    FPSCounter fps;
-    fps.setFont(freshman);
+    FPSCounter fpsCounter;
+    fpsCounter.setFont(freshman);
    
     Player orzel;
 
@@ -52,13 +52,13 @@ int main()
                     window.close();
                 }
                 else if(event.key.code==sf::Keyboard::F1){
-                    fps.visible=!fps.visible;
+                    fpsCounter.visible=!fpsCounter.visible;
                 }
             }
         }
 
-        fps.fps=1/dt.asSeconds();
-        fps.setString(std::to_string(fps.fps)+" FPS");
+        fpsCounter.fps=1/dt.asSeconds();
+        fpsCounter.setString(std::to_string(fpsCounter.fps)+" FPS");
         
         orzel.update(dt.asSeconds());
 
@@ -68,8 +68,8 @@ int main()
         window.draw(orzel);
 
         //text
-        if(fps.visible){
-            window.draw(fps);
+        if(fpsCounter.visible){
+            window.draw(fpsCounter);
         }
 
         window.display();

@@ -34,6 +34,8 @@ Player::Player()
     clock.restart();  
 }
 
+//FIX DIAGONAL WALKING ANIMATION
+
 void Player::update(float dt)
 {
     // movement

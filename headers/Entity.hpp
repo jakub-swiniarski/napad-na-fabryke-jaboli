@@ -3,7 +3,7 @@
 
 class Entity: public sf::Sprite{
     protected:
-        sf::Texture img;
+        sf::Texture imgU, imgD, imgR, imgL;
         short hp;
 
     public:

@@ -89,7 +89,7 @@ void Player::update(float dt)
     }
 
     //reset current frame
-    if(frame>=10){
+    if(frame>=2){
         frame=0;
     }
 }

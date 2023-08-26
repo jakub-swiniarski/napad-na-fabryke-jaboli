@@ -7,7 +7,7 @@ Player::Player()
     Player::setPosition(0, 0);
     frame=0;
 
-    //standing
+    // standing
     imgU.loadFromFile("assets/sprites/zywiec/idle/zywiecU.png");
     imgD.loadFromFile("assets/sprites/zywiec/idle/zywiecD.png");
     imgR.loadFromFile("assets/sprites/zywiec/idle/zywiecR.png");
@@ -27,7 +27,7 @@ Player::Player()
         imgLW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecL"+std::to_string(i)+".png"); 
     }
 
-    Player::setScale(4.f, 4.f);
+    Player::setScale(3.f, 3.f);
     Player::setTexture(imgD);
     speed = 255;
 
@@ -59,7 +59,7 @@ void Player::update(float dt)
 
             frame++;
             clock.restart();
-        }         
+        }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
@@ -71,7 +71,7 @@ void Player::update(float dt)
 
             frame++;
             clock.restart();
-        } 
+        }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
@@ -83,7 +83,7 @@ void Player::update(float dt)
 
             frame++;
             clock.restart();
-        } 
+        }
     }
 
     //reset current frame

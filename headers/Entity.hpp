@@ -8,5 +8,5 @@ class Entity: public sf::Sprite{
 
     public:
         Entity();
-        void update();
+        void update(float dt);
 };

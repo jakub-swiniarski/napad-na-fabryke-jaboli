@@ -67,6 +67,8 @@ int main()
 
         fps.fps=1/dt.asSeconds();
         fps.setString(std::to_string(fps.fps)+" FPS");
+        
+        orzel.update(dt.asSeconds());
 
         window.clear();
 

@@ -6,10 +6,10 @@ Player::Player()
     Player::setPosition(0, 0);
 
     //standing
-    imgU.loadFromFile("assets/sprites/zywiec/standing/zywiecU.png");
-    imgD.loadFromFile("assets/sprites/zywiec/standing/zywiecD.png");
-    imgR.loadFromFile("assets/sprites/zywiec/standing/zywiecR.png");
-    imgL.loadFromFile("assets/sprites/zywiec/standing/zywiecL.png");
+    imgU.loadFromFile("assets/sprites/zywiec/idle/zywiecU.png");
+    imgD.loadFromFile("assets/sprites/zywiec/idle/zywiecD.png");
+    imgR.loadFromFile("assets/sprites/zywiec/idle/zywiecR.png");
+    imgL.loadFromFile("assets/sprites/zywiec/idle/zywiecL.png");
 
     //walking
 

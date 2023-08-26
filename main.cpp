@@ -9,6 +9,7 @@
 #include <string>
 
 #include "headers/FPSCounter.hpp"
+#include "headers/Player.hpp"
 
 int main()
 {
@@ -30,7 +31,9 @@ int main()
     // fps counter
     FPSCounter fps;
     fps.setFont(freshman);
-    
+   
+    Player orzel;
+
     while (window.isOpen())
     {
         dt = dtClock.restart();
@@ -67,6 +70,10 @@ int main()
 
         window.clear();
 
+        //entities
+        window.draw(orzel);
+
+        //text
         if(fps.visible){
             window.draw(fps);
         }

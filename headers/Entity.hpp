@@ -1,7 +1,9 @@
+#include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
 class Entity: public sf::Sprite{
-    private:
+    protected:
+        sf::Texture img;
         short hp;
 
     public:

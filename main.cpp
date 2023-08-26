@@ -9,6 +9,7 @@
 #include <string>
 
 #include "headers/FPSCounter.hpp"
+#include "headers/Player.hpp"
 
 int main()
 {
@@ -28,9 +29,11 @@ int main()
     }
 
     // fps counter
-    FPSCounter fps;
-    fps.setFont(freshman);
-    
+    FPSCounter fpsCounter;
+    fpsCounter.setFont(freshman);
+   
+    Player orzel;
+
     while (window.isOpen())
     {
         dt = dtClock.restart();
@@ -49,26 +52,24 @@ int main()
                     window.close();
                 }
                 else if(event.key.code==sf::Keyboard::F1){
-                    fps.visible=!fps.visible;
+                    fpsCounter.visible=!fpsCounter.visible;
                 }
             }
         }
 
-        // player movement
-        /*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-            player.move(0.f,-192*dt.asSeconds());
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            player.move(0.f,192*dt.asSeconds());
-        }*/
-
-        fps.fps=1/dt.asSeconds();
-        fps.setString(std::to_string(fps.fps)+" FPS");
+        fpsCounter.fps=1/dt.asSeconds();
+        fpsCounter.setString(std::to_string(fpsCounter.fps)+" FPS");
+        
+        orzel.update(dt.asSeconds());
 
         window.clear();
 
-        if(fps.visible){
-            window.draw(fps);
+        //entities
+        window.draw(orzel);
+
+        //text
+        if(fpsCounter.visible){
+            window.draw(fpsCounter);
         }
 
         window.display();

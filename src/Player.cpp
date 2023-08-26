@@ -17,22 +17,22 @@ void Player::update(float dt)
     // movement
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        Player::move(0.f, -192 * dt);
+        Player::move(0.f, -225 * dt);
         Player::setTexture(imgU);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
-        Player::move(0.f, 192 * dt);
+        Player::move(0.f, 225 * dt);
         Player::setTexture(imgD);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        Player::move(192 * dt, 0.f);
+        Player::move(225 * dt, 0.f);
         Player::setTexture(imgR);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        Player::move(-192 * dt, 0.f);
+        Player::move(-225 * dt, 0.f);
         Player::setTexture(imgL);
     }
 }

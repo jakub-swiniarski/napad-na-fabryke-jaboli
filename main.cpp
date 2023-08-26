@@ -57,14 +57,6 @@ int main()
             }
         }
 
-        // player movement
-        /*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-            player.move(0.f,-192*dt.asSeconds());
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            player.move(0.f,192*dt.asSeconds());
-        }*/
-
         fps.fps=1/dt.asSeconds();
         fps.setString(std::to_string(fps.fps)+" FPS");
         

@@ -5,7 +5,7 @@ class Entity: public sf::Sprite{
     protected:
         sf::Texture imgU, imgD, imgR, imgL;
         short hp;
-        int speed;
+        short speed;
 
     public:
         Entity();

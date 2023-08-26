@@ -9,7 +9,7 @@ protected:
     sf::Texture imgU, imgD, imgR, imgL;
 
     //walking
-    sf::Texture imgUW[3], imgDW[3], imgRW[3], imgLW[3];
+    sf::Texture imgUW[2], imgDW[2], imgRW[2], imgLW[2];
 
     //clock for animation
     sf::Clock clock;

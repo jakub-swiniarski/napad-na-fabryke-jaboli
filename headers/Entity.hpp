@@ -6,7 +6,7 @@ class Entity : public sf::Sprite
 protected:
     sf::Texture imgU, imgD, imgR, imgL;
     short hp;
-    unsigned short speed;
+    short speed;
 
 public:
     Entity();

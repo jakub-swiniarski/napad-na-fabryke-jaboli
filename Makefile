@@ -1,5 +1,6 @@
 jabol: main.o FPSCounter.o Player.o Entity.o
 	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+	cp -R /assets /build/assets
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -19,3 +20,4 @@ Entity.o: src/Entity.cpp headers/Entity.hpp
 
 clean:
 	rm build/*.o build/jabol
+	rm -r build/assets

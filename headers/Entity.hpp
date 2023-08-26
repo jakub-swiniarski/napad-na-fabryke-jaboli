@@ -1,13 +1,14 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
-class Entity: public sf::Sprite{
-    protected:
-        sf::Texture imgU, imgD, imgR, imgL;
-        short hp;
-        short speed;
+class Entity : public sf::Sprite
+{
+protected:
+    sf::Texture imgU, imgD, imgR, imgL;
+    short hp;
+    short speed;
 
-    public:
-        Entity();
-        void update(float dt);
+public:
+    Entity();
+    void update(float dt);
 };

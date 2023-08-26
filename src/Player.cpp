@@ -4,10 +4,13 @@
 Player::Player()
 {
     Player::setPosition(0, 0);
+
+    //standing
     imgU.loadFromFile("assets/sprites/zywiec/zywiecU.png");
     imgD.loadFromFile("assets/sprites/zywiec/zywiecD.png");
     imgR.loadFromFile("assets/sprites/zywiec/zywiecR.png");
     imgL.loadFromFile("assets/sprites/zywiec/zywiecL.png");
+
     Player::setScale(4.f, 4.f);
     Player::setTexture(imgD);
     speed = 255;

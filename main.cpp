@@ -32,7 +32,7 @@ int main()
     FPSCounter fpsCounter;
     fpsCounter.setFont(freshman);
 
-    Player zywiec;
+    Player zywiec /*zdrój*/;
 
     while (window.isOpen())
     {

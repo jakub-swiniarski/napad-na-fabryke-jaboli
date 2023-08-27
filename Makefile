@@ -19,4 +19,3 @@ Entity.o: src/Entity.cpp headers/Entity.hpp
 
 clean:
 	rm build/*.o build/jabol
-	rm -r build/assets

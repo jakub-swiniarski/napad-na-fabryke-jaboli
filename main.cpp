@@ -68,7 +68,7 @@ int main()
         // entities
         window.draw(zywiec);
 
-        // text 👨🏿
+        // text
         if (fpsCounter.visible)
         {
             window.draw(fpsCounter);

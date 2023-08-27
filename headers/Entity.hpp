@@ -23,5 +23,4 @@ protected:
 public:
     Entity();
     void update(float dt);
-    // 👨🏿
 };

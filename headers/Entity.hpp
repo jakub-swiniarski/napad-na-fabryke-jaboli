@@ -5,16 +5,16 @@
 class Entity : public sf::Sprite
 {
 protected:
-    //standing
+    // standing
     sf::Texture imgU, imgD, imgR, imgL;
 
-    //walking
+    // walking
     sf::Texture imgUW[2], imgDW[2], imgRW[2], imgLW[2];
 
-    //clock for animation
+    // clock for animation
     sf::Clock clock;
 
-    //current frame
+    // current frame
     short frame;
 
     short hp;
@@ -23,4 +23,5 @@ protected:
 public:
     Entity();
     void update(float dt);
+    // 👨🏿
 };

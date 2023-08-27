@@ -21,7 +21,7 @@ int main()
     sf::Clock dtClock;
     sf::Time dt;
 
-    //font
+    // font
     sf::Font freshman;
     if (!freshman.loadFromFile("assets/fonts/Freshman.ttf"))
     {
@@ -31,7 +31,7 @@ int main()
     // fps counter
     FPSCounter fpsCounter;
     fpsCounter.setFont(freshman);
-   
+
     Player zywiec;
 
     while (window.isOpen())
@@ -51,24 +51,26 @@ int main()
                 {
                     window.close();
                 }
-                else if(event.key.code==sf::Keyboard::F1){
-                    fpsCounter.visible=!fpsCounter.visible;
+                else if (event.key.code == sf::Keyboard::F1)
+                {
+                    fpsCounter.visible = !fpsCounter.visible;
                 }
             }
         }
 
-        fpsCounter.fps=1/dt.asSeconds();
-        fpsCounter.setString(std::to_string(fpsCounter.fps)+" FPS");
-        
+        fpsCounter.fps = 1 / dt.asSeconds();
+        fpsCounter.setString(std::to_string(fpsCounter.fps) + " FPS");
+
         zywiec.update(dt.asSeconds());
 
         window.clear();
 
-        //entities
+        // entities
         window.draw(zywiec);
 
-        //text
-        if(fpsCounter.visible){
+        // text 👨🏿
+        if (fpsCounter.visible)
+        {
             window.draw(fpsCounter);
         }
 

@@ -32,7 +32,7 @@ int main()
     FPSCounter fpsCounter;
     fpsCounter.setFont(freshman);
 
-    Player zywiec /*zdrój*/;
+    Player norbi /*zdrój*/;
 
     while (window.isOpen())
     {
@@ -61,12 +61,12 @@ int main()
         fpsCounter.fps = 1 / dt.asSeconds();
         fpsCounter.setString(std::to_string(fpsCounter.fps) + " FPS");
 
-        zywiec.update(dt.asSeconds());
+        norbi.update(dt.asSeconds());
 
         window.clear();
 
         // entities
-        window.draw(zywiec);
+        window.draw(norbi);
 
         // text
         if (fpsCounter.visible)

@@ -8,23 +8,23 @@ Player::Player()
     frame=0;
 
     // standing
-    imgU.loadFromFile("assets/sprites/zywiec/idle/zywiecU.png");
-    imgD.loadFromFile("assets/sprites/zywiec/idle/zywiecD.png");
-    imgR.loadFromFile("assets/sprites/zywiec/idle/zywiecR.png");
-    imgL.loadFromFile("assets/sprites/zywiec/idle/zywiecL.png");
+    imgU.loadFromFile("assets/sprites/norbi/idle/norbiU.png");
+    imgD.loadFromFile("assets/sprites/norbi/idle/norbiD.png");
+    imgR.loadFromFile("assets/sprites/norbi/idle/norbiR.png");
+    imgL.loadFromFile("assets/sprites/norbi/idle/norbiL.png");
 
     //walking
     for(int i=1; i<=2; i++){
-        imgUW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecU"+std::to_string(i)+".png"); 
+        imgUW[i-1].loadFromFile("assets/sprites/norbi/walk/norbiU"+std::to_string(i)+".png"); 
     }
     for(int i=1; i<=2; i++){
-        imgDW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecD"+std::to_string(i)+".png"); 
+        imgDW[i-1].loadFromFile("assets/sprites/norbi/walk/norbiD"+std::to_string(i)+".png"); 
     }
     for(int i=1; i<=2; i++){
-        imgRW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecR"+std::to_string(i)+".png"); 
+        imgRW[i-1].loadFromFile("assets/sprites/norbi/walk/norbiR"+std::to_string(i)+".png"); 
     }
     for(int i=1; i<=2; i++){
-        imgLW[i-1].loadFromFile("assets/sprites/zywiec/walk/zywiecL"+std::to_string(i)+".png"); 
+        imgLW[i-1].loadFromFile("assets/sprites/norbi/walk/zywiecL"+std::to_string(i)+".png"); 
     }
 
     Player::setScale(3.f, 3.f);

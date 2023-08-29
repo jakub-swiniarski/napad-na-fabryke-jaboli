@@ -24,7 +24,7 @@ Player::Player()
         imgRW[i-1].loadFromFile("assets/sprites/norbi/walk/norbiR"+std::to_string(i)+".png"); 
     }
     for(int i=1; i<=2; i++){
-        imgLW[i-1].loadFromFile("assets/sprites/norbi/walk/zywiecL"+std::to_string(i)+".png"); 
+        imgLW[i-1].loadFromFile("assets/sprites/norbi/walk/norbiL"+std::to_string(i)+".png"); 
     }
 
     Player::setScale(3.f, 3.f);

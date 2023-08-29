@@ -1,5 +1,5 @@
-jabol: main.o FPSCounter.o Player.o Entity.o BG.o
-	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+jabol: main.o FPSCounter.o Player.o Entity.o BG.o RoomNorbi.o
+	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o build/BG.o build/RoomNorbi.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 prod: main.o FPSCounter.o Player.o Entity.o
 	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
@@ -24,6 +24,10 @@ Entity.o: src/Entity.cpp headers/Entity.hpp
 BG.o: src/BG.cpp headers/BG.hpp
 	g++ -c src/BG.cpp
 	mv BG.o ./build
+
+RoomNorbi.o: src/RoomNorbi.cpp headers/RoomNorbi.hpp
+	g++ -c src/RoomNorbi.cpp
+	mv RoomNorbi.o ./build
 
 clean:
 	rm build/*.o build/jabol

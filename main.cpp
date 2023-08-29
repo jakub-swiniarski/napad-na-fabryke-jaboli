@@ -10,6 +10,7 @@
 
 #include "headers/FPSCounter.hpp"
 #include "headers/Player.hpp"
+#include "headers/RoomNorbi.hpp"
 
 int main()
 {
@@ -32,7 +33,11 @@ int main()
     FPSCounter fpsCounter;
     fpsCounter.setFont(freshman);
 
-    Player norbi /*zdrój*/;
+    //world
+    RoomNorbi roomNorbi;
+
+    //entities
+    Player norbi;
 
     while (window.isOpen())
     {
@@ -65,7 +70,10 @@ int main()
 
         window.clear();
 
-        // entities
+        //world
+        window.draw(roomNorbi);
+
+        //entities
         window.draw(norbi);
 
         // text

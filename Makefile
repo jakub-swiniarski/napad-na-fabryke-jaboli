@@ -1,4 +1,4 @@
-jabol: main.o FPSCounter.o Player.o Entity.o
+jabol: main.o FPSCounter.o Player.o Entity.o BG.o
 	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 prod: main.o FPSCounter.o Player.o Entity.o
@@ -20,6 +20,10 @@ Player.o: src/Player.cpp headers/Player.hpp
 Entity.o: src/Entity.cpp headers/Entity.hpp
 	g++ -c src/Entity.cpp
 	mv Entity.o ./build
+
+BG.o: src/BG.cpp headers/BG.hpp
+	g++ -c src/BG.cpp
+	mv BG.o ./build
 
 clean:
 	rm build/*.o build/jabol

@@ -18,6 +18,7 @@ int main()
     settings.antialiasingLevel = 8;
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Default, settings);
+    window.setFramerateLimit(60);
 
     sf::Clock dtClock;
     sf::Time dt;

@@ -29,5 +29,7 @@ RoomNorbi.o: src/RoomNorbi.cpp headers/RoomNorbi.hpp
 	g++ -c src/RoomNorbi.cpp
 	mv RoomNorbi.o ./build
 
+.PHONY: clean
+
 clean:
 	rm build/*.o build/jabol

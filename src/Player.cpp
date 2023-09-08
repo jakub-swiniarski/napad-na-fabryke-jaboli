@@ -4,7 +4,7 @@
 
 Player::Player()
 {
-    Player::setPosition(0, 0);
+    Player::setPosition(100, 100);
     frame = 0;
 
     // standing
@@ -43,6 +43,9 @@ Player::Player()
 
 void Player::update(float dt)
 {
+    //call of overriden update method
+    Entity::update(dt);
+
     // movement
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {

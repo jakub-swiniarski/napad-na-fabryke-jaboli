@@ -20,6 +20,8 @@ protected:
     short hp;
     short speed;
 
+    bool isIndoors;
+
 public:
     Entity();
     void update(float dt);

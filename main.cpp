@@ -55,14 +55,19 @@ int main()
             // keyboard input - single keypress
             if (event.type == sf::Event::EventType::KeyPressed)
             {
+                //ESC - CLOSE WINDOW
                 if (event.key.code == sf::Keyboard::Escape)
                 {
                     window.close();
                 }
+
+                //F1 - TOGGLE FPS COUNTER
                 else if (event.key.code == sf::Keyboard::F1)
                 {
                     fpsCounter.visible = !fpsCounter.visible;
                 }
+
+                //F11 - TOGGLE FULLSCREEN
                 else if (event.key.code == sf::Keyboard::F11){
                     fullscreen=!fullscreen;
                     if(fullscreen){

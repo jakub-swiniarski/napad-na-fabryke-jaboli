@@ -6,6 +6,7 @@
 
 #include <SFML/System/Time.hpp>
 
+#include <SFML/Window/WindowStyle.hpp>
 #include <string>
 
 #include "headers/FPSCounter.hpp"
@@ -19,6 +20,7 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Fullscreen, settings);
     window.setFramerateLimit(60);
+    bool fullscreen=1;
 
     sf::Clock dtClock;
     sf::Time dt;
@@ -60,6 +62,15 @@ int main()
                 else if (event.key.code == sf::Keyboard::F1)
                 {
                     fpsCounter.visible = !fpsCounter.visible;
+                }
+                else if (event.key.code == sf::Keyboard::F11){
+                    fullscreen=!fullscreen;
+                    if(fullscreen){
+                        window.create(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Fullscreen, settings);
+                    }
+                    else{
+                        window.create(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Default, settings);
+                    }
                 }
             }
         }

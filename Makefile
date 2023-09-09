@@ -30,5 +30,5 @@ RoomNorbi.o: src/RoomNorbi.cpp headers/RoomNorbi.hpp
 clean:
 	rm build/*.o build/jabol
 
-run:
+run: jabol
 	./build/jabol

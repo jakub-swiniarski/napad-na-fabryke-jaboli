@@ -20,6 +20,7 @@
 #include "headers/RoomNorbi.hpp"
 
 #include "headers/Bed.hpp"
+#include "headers/Wardrobe.hpp"
 
 int main()
 {
@@ -50,6 +51,7 @@ int main()
     //world
     RoomNorbi roomNorbi;
     Bed bed;
+    Wardrobe wardrobe;
 
     //entities
     Player norbi;
@@ -108,6 +110,7 @@ int main()
         //world
         window.draw(roomNorbi);
         window.draw(bed);
+        window.draw(wardrobe);
 
         //entities
         window.draw(norbi);

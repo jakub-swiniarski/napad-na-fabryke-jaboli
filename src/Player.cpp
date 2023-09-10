@@ -4,7 +4,7 @@
 
 Player::Player()
 {
-    Player::setPosition(100, 100);
+    Player::setPosition(92, 68);
     frame = 0;
 
     // standing

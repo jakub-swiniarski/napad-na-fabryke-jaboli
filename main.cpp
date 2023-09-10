@@ -77,6 +77,11 @@ int main()
                         window.create(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Default, settings);
                     }
                 }
+
+                //O - ORZEL
+                else if (event.key.code == sf::Keyboard::O){
+                    norbi.orzel[0].play();
+                }
             }
         }
 

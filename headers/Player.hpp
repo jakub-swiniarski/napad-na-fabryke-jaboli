@@ -6,9 +6,9 @@ class Player : public Entity
 {
     private:
         sf::SoundBuffer orzelB[2]; 
-        sf::Sound orzel[2];
-
+        
     public:
+        sf::Sound orzel[2];
         Player();
         void update(float dt); // should technically be inherited from Entity but c++ moment // 🙈
 };

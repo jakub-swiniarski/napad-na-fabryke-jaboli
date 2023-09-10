@@ -7,6 +7,8 @@
 #include <SFML/System/Time.hpp>
 
 #include <SFML/Window/WindowStyle.hpp>
+
+#include <cstdlib>
 #include <string>
 
 #include "headers/FPSCounter.hpp"
@@ -24,6 +26,9 @@ int main()
 
     sf::Clock dtClock;
     sf::Time dt;
+
+    //random number
+    int random;
 
     // font
     sf::Font freshman;
@@ -80,7 +85,8 @@ int main()
 
                 //O - ORZEL
                 else if (event.key.code == sf::Keyboard::O){
-                    norbi.orzel[0].play();
+                    random=rand()%2;
+                    norbi.orzel[random].play();
                 }
             }
         }

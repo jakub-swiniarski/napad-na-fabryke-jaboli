@@ -8,12 +8,18 @@
 
 #include <SFML/Window/WindowStyle.hpp>
 
+
 #include <cstdlib>
 #include <string>
 
+
 #include "headers/FPSCounter.hpp"
+
 #include "headers/Player.hpp"
+
 #include "headers/RoomNorbi.hpp"
+
+#include "headers/Bed.hpp"
 
 int main()
 {
@@ -43,6 +49,7 @@ int main()
 
     //world
     RoomNorbi roomNorbi;
+    Bed bed;
 
     //entities
     Player norbi;
@@ -100,6 +107,7 @@ int main()
 
         //world
         window.draw(roomNorbi);
+        window.draw(bed);
 
         //entities
         window.draw(norbi);

@@ -31,6 +31,12 @@ Player::Player()
         imgLW[i - 1].loadFromFile("assets/sprites/norbi/walk/norbiL" + std::to_string(i) + ".png");
     }
 
+    //sounds and sound buffers
+    for(int i=0; i<2; i++){
+        orzelB[i].loadFromFile("assets/audio/orzel/orzel"+std::to_string(i+1)+".wav");
+        orzel[i].setBuffer(orzelB[i]);
+    }
+
     Player::setScale(3.f, 3.f);
     Player::setTexture(imgD);
     speed = 255;

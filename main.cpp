@@ -24,6 +24,8 @@
 #include "headers/Wardrobe.hpp"
 #include "headers/TV.hpp"
 
+#include "headers/path.hpp"
+
 int main()
 {
     sf::ContextSettings settings;
@@ -41,7 +43,7 @@ int main()
 
     // font
     sf::Font freshman;
-    if (!freshman.loadFromFile("assets/fonts/Freshman.ttf"))
+    if (!freshman.loadFromFile(filepath+"fonts/Freshman.ttf"))
     {
         window.close();
     }

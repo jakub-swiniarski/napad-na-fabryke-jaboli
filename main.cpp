@@ -22,6 +22,7 @@
 
 #include "headers/Bed.hpp"
 #include "headers/Wardrobe.hpp"
+#include "headers/TV.hpp"
 
 int main()
 {
@@ -53,6 +54,7 @@ int main()
     RoomNorbi roomNorbi;
     Bed bed;
     Wardrobe wardrobe;
+    TV tv;
 
     //entities
     Player norbi;
@@ -112,6 +114,7 @@ int main()
         window.draw(roomNorbi);
         window.draw(bed);
         window.draw(wardrobe);
+        window.draw(tv);
 
         //entities
         window.draw(norbi);

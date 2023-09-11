@@ -1,7 +1,8 @@
 #include "../headers/TV.hpp"
+#include "../headers/path.hpp"
 
 TV::TV(){
-    img.loadFromFile("assets/sprites/objects/tv.png");
+    img.loadFromFile(filepath+"sprites/objects/tv.png");
     TV::setTexture(img);
     TV::setScale(6.f,6.f);
 

@@ -1,7 +1,8 @@
 #include "../headers/Bed.hpp"
+#include "../headers/path.hpp"
 
 Bed::Bed(){
-    img.loadFromFile("assets/sprites/objects/bed.png");
+    img.loadFromFile(filepath+"sprites/objects/bed.png");
     Bed::setTexture(img);
     Bed::setScale(4.f,4.f);
 

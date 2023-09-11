@@ -1,6 +1,7 @@
 #include "../headers/Player.hpp"
 #include <SFML/Window/Keyboard.hpp>
 #include <string>
+#include "../headers/path.hpp"
 
 Player::Player()
 {
@@ -8,32 +9,32 @@ Player::Player()
     frame = 0;
 
     // standing
-    imgU.loadFromFile("assets/sprites/norbi/idle/norbiU.png");
-    imgD.loadFromFile("assets/sprites/norbi/idle/norbiD.png");
-    imgR.loadFromFile("assets/sprites/norbi/idle/norbiR.png");
-    imgL.loadFromFile("assets/sprites/norbi/idle/norbiL.png");
+    imgU.loadFromFile(filepath+"sprites/norbi/idle/norbiU.png");
+    imgD.loadFromFile(filepath+"sprites/norbi/idle/norbiD.png");
+    imgR.loadFromFile(filepath+"sprites/norbi/idle/norbiR.png");
+    imgL.loadFromFile(filepath+"sprites/norbi/idle/norbiL.png");
 
     // walking
     for (int i = 1; i <= 2; i++)
     {
-        imgUW[i - 1].loadFromFile("assets/sprites/norbi/walk/norbiU" + std::to_string(i) + ".png");
+        imgUW[i - 1].loadFromFile(filepath+"sprites/norbi/walk/norbiU" + std::to_string(i) + ".png");
     }
     for (int i = 1; i <= 2; i++)
     {
-        imgDW[i - 1].loadFromFile("assets/sprites/norbi/walk/norbiD" + std::to_string(i) + ".png");
+        imgDW[i - 1].loadFromFile(filepath+"sprites/norbi/walk/norbiD" + std::to_string(i) + ".png");
     }
     for (int i = 1; i <= 2; i++)
     {
-        imgRW[i - 1].loadFromFile("assets/sprites/norbi/walk/norbiR" + std::to_string(i) + ".png");
+        imgRW[i - 1].loadFromFile(filepath+"sprites/norbi/walk/norbiR" + std::to_string(i) + ".png");
     }
     for (int i = 1; i <= 2; i++)
     {
-        imgLW[i - 1].loadFromFile("assets/sprites/norbi/walk/norbiL" + std::to_string(i) + ".png");
+        imgLW[i - 1].loadFromFile(filepath+"sprites/norbi/walk/norbiL" + std::to_string(i) + ".png");
     }
 
     //sounds and sound buffers
     for(int i=0; i<2; i++){
-        orzelB[i].loadFromFile("assets/audio/orzel/orzel"+std::to_string(i+1)+".wav");
+        orzelB[i].loadFromFile(filepath+"audio/orzel/orzel"+std::to_string(i+1)+".wav");
         orzel[i].setBuffer(orzelB[i]);
     }
 

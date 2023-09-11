@@ -11,6 +11,7 @@
 
 #include <cstdlib>
 #include <string>
+#include <sys/types.h>
 
 
 #include "headers/FPSCounter.hpp"
@@ -35,7 +36,7 @@ int main()
     sf::Time dt;
 
     //random number
-    int random;
+    u_int8_t random;
 
     // font
     sf::Font freshman;

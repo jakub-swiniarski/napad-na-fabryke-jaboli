@@ -4,7 +4,7 @@
 Table::Table(){
     img.loadFromFile(filepath+"sprites/objects/table.png");
     Table::setTexture(img);
-    Table::setScale(4.f,4.f);
+    Table::setScale(3.f,3.f);
 
-    Table::setPosition(500.f,500.f);
+    Table::setPosition(500.f,300.f);
 }

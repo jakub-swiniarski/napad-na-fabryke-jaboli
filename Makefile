@@ -1,5 +1,5 @@
-jabol: main.o FPSCounter.o Player.o Entity.o BG.o RoomNorbi.o Bed.o Wardrobe.o TV.o path.o
-	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o build/BG.o build/RoomNorbi.o build/Bed.o build/Wardrobe.o build/TV.o build/path.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+jabol: main.o FPSCounter.o Player.o Entity.o BG.o RoomNorbi.o Bed.o Wardrobe.o TV.o path.o Table.o
+	g++ build/main.o build/FPSCounter.o build/Player.o build/Entity.o build/BG.o build/RoomNorbi.o build/Bed.o build/Wardrobe.o build/TV.o build/path.o build/Table.o -o build/jabol -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -40,6 +40,10 @@ TV.o: src/TV.cpp headers/TV.hpp
 path.o: src/path.cpp headers/path.hpp
 	g++ -c src/path.cpp
 	mv path.o ./build
+
+Table.o: src/Table.cpp headers/Table.hpp
+	g++ -c src/Table.cpp
+	mv Table.o ./build
 
 .PHONY: clean run
 

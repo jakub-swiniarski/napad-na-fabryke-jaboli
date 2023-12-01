@@ -33,7 +33,7 @@ int main()
     settings.antialiasingLevel = 8;
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Fullscreen, settings);
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(9999999999999);
     bool fullscreen=1;
 
     sf::Clock dtClock;

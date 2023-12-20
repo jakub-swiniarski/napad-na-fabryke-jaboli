@@ -2,7 +2,7 @@
 
 class FPSCounter: public sf::Text{
     public:
-        short fps;
+        int fps;
         bool visible; 
 
         FPSCounter();

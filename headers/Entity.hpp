@@ -15,10 +15,10 @@ protected:
     sf::Clock clock;
 
     // current frame
-    uint8_t frame;
+    int frame;
 
-    uint8_t hp;
-    uint8_t speed;
+    int hp;
+    int speed;
 
     bool isIndoors;
 

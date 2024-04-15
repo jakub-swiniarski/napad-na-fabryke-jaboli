@@ -1,4 +1,4 @@
-#include "../headers/BG.hpp"
+#include "BG.hpp"
 
 BG::BG(){
     /*img.loadFromFile("assets/sprites/missing.png");

@@ -1,14 +1,14 @@
-FLAGS=-lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
-SOURCES=main.cpp src/path.cpp src/FPSCounter.cpp src/Player.cpp src/Entity.cpp src/BG.cpp src/RoomNorbi.cpp src/Bed.cpp src/Wardrobe.cpp src/TV.cpp src/Table.cpp
-OBJECTS=main.o FPSCounter.o Player.o Entity.o BG.o RoomNorbi.o Bed.o Wardrobe.o TV.o path.o Table.o 
+SRC = $(wildcard src/*.cpp)
+HDR = $(wildcard src/*.hpp)
+OBJ = $(patsubst src/%.cpp, %.o, $(SRC))
 
-jabol: $(OBJECTS)
-	g++ $(OBJECTS) -o jabol $(FLAGS)
+jabol: $(OBJ)
+	g++ -o $@ $(OBJ) -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-$(OBJECTS): $(SOURCES)
-	g++ -c $(SOURCES)
+$(OBJ): $(SRC) $(HDR)
+	g++ -c $(SRC) -O2
 
-.PHONY: clean run
+.PHONY: clean run install uninstall
 
 clean:
 	rm *.o jabol

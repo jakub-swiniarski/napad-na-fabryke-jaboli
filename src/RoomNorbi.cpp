@@ -1,5 +1,5 @@
-#include "../headers/RoomNorbi.hpp"
-#include "../headers/path.hpp"
+#include "RoomNorbi.hpp"
+#include "path.hpp"
 
 RoomNorbi::RoomNorbi(){
     RoomNorbi::setPosition(0.f,0.f);

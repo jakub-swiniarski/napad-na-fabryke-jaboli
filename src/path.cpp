@@ -1,4 +1,4 @@
-#include "../headers/path.hpp"
+#include "path.hpp"
 #include <string>
 
 const std::string filepath="assets/";

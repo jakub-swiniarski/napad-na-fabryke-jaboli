@@ -1,4 +1,4 @@
-#include "../headers/FPSCounter.hpp"
+#include "FPSCounter.hpp"
 #include <SFML/Graphics/Color.hpp>
 
 FPSCounter::FPSCounter()

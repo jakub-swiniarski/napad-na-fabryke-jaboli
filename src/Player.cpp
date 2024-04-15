@@ -1,8 +1,8 @@
-#include "../headers/Player.hpp"
+#include "Player.hpp"
 #include <SFML/Window/Keyboard.hpp>
 #include <string>
 #include <sys/types.h>
-#include "../headers/path.hpp"
+#include "path.hpp"
 
 Player::Player()
 {

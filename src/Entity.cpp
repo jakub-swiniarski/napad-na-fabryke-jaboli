@@ -1,4 +1,4 @@
-#include "../headers/Entity.hpp"
+#include "Entity.hpp"
 
 Entity::Entity()
 {

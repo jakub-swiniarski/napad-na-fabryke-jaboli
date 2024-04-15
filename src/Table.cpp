@@ -1,5 +1,5 @@
-#include "../headers/Table.hpp"
-#include "../headers/path.hpp"
+#include "Table.hpp"
+#include "path.hpp"
 
 Table::Table(){
     img.loadFromFile(filepath+"sprites/objects/table.png");

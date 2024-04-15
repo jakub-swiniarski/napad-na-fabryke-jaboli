@@ -13,25 +13,25 @@
 #include <string>
 
 
-#include "headers/FPSCounter.hpp"
+#include "FPSCounter.hpp"
 
-#include "headers/Player.hpp"
+#include "Player.hpp"
 
-#include "headers/RoomNorbi.hpp"
+#include "RoomNorbi.hpp"
 
-#include "headers/Bed.hpp"
-#include "headers/Wardrobe.hpp"
-#include "headers/TV.hpp"
-#include "headers/Table.hpp"
+#include "Bed.hpp"
+#include "Wardrobe.hpp"
+#include "TV.hpp"
+#include "Table.hpp"
 
-#include "headers/path.hpp"
+#include "path.hpp"
 
 int main()
 {
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
 
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::Fullscreen, settings);
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Napad na Fabryke Jaboli", sf::Style::None, settings);
     window.setFramerateLimit(60);
     bool fullscreen=1;
 

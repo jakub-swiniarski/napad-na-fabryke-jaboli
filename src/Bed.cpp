@@ -1,5 +1,5 @@
-#include "../headers/Bed.hpp"
-#include "../headers/path.hpp"
+#include "Bed.hpp"
+#include "path.hpp"
 
 Bed::Bed(){
     img.loadFromFile(filepath+"sprites/objects/bed.png");

@@ -1,5 +1,5 @@
-#include "../headers/TV.hpp"
-#include "../headers/path.hpp"
+#include "TV.hpp"
+#include "path.hpp"
 
 TV::TV(){
     img.loadFromFile(filepath+"sprites/objects/tv.png");

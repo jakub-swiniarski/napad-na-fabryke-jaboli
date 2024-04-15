@@ -1,5 +1,5 @@
-#include "../headers/Wardrobe.hpp"
-#include "../headers/path.hpp"
+#include "Wardrobe.hpp"
+#include "path.hpp"
 
 Wardrobe::Wardrobe(){
     img.loadFromFile(filepath+"sprites/objects/wardrobe.png");

@@ -16,6 +16,6 @@ run: all
 	./jabol
 
 clean:
-	rm *.o jabol
+	rm -f *.o jabol
 
 .PHONY: all run clean

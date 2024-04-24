@@ -2,16 +2,20 @@ SRC = $(wildcard src/*.cpp)
 HDR = $(wildcard src/*.hpp)
 OBJ = $(patsubst src/%.cpp, %.o, $(SRC))
 
+all: jabol
+
+%.o: src/%.cpp
+	g++ -c -O2 $<
+
+$(OBJ): $(HDR)
+
 jabol: $(OBJ)
 	g++ -o $@ $(OBJ) -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-$(OBJ): $(SRC) $(HDR)
-	g++ -c $(SRC) -O2
-
-.PHONY: clean run install uninstall
+run: all
+	./jabol
 
 clean:
 	rm *.o jabol
 
-run: jabol
-	./jabol
+.PHONY: all run clean
